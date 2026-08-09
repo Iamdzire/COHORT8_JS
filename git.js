@@ -8,4 +8,6 @@
 
 - Merge: Merging is the process of combining changes from one branch into another. It allows you to integrate new features or bug fixes into the main codebase.
 
-- staging area: The staging area is a place where you can prepare your changes before committing them. You can add files to the staging area using the git add command. */
+- staging area: The staging area is a place where you can prepare your changes before committing them.
+
+- "git add" is used to select changes you want to save while "git commit" is used to save those changes permanently. You can add files to the staging area using the git add command. */
