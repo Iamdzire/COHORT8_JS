@@ -61,8 +61,14 @@ position to start from, second parameter is the number of items to remove, and t
 console.log("This is spliced:", students.splice(1, 3, "Ada", "Obi", "Funmi", "Ade", "Tobi"))
 console.log("Original array:", students)
 
-/** Higher Order Array Methods: These are methods that accept callback function as their parameter.
- * Callback functions are functions that performs an operation on each element/item in an array. */
+// Higher Order Array Methods: These are methods that accept callback function as their parameter.
+
+ /** forEach method: runs code on each item in an array. It does not affect the original array.
+  * if you store the result of the forEach method in a variable, it will return "undefined" because it does not return anything. */
+
+ let artists = ["BurnaBoy", "Asake", "Wizkid", "Davido", "Olamide"]
+artists.forEach(artist => console.log(`I love listening to ${artist}`))
+ console.log(artists)
 
  // map Method: Creates a new array, by transforming each element in an array individually. It does not affect the original array.
 
