@@ -1,5 +1,5 @@
 /** Array Methods
- *  .lenght: Gives the number of item in an array */
+ * .length: Gives the number of items in an array. .length is not a method rather a property */
 
 let students = ["Ebube", "Ekene", "Chigozie", "Chichi", "Chiemerie"]
 console.log(students.length)
