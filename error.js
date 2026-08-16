@@ -41,8 +41,8 @@ function loadUserData(userId) {
     }
 }
 
-console.log(loadUserData(5));   // Data loaded for user: 5  -->  Loading complete.
-console.log(loadUserData(-1));  // Failed: User ID must be greater than 0  -->  Loading complete. */
+loadUserData(5);   // Data loaded for user: 5  -->  Loading complete.
+loadUserData(-1);  // Failed: User ID must be greater than 0  -->  Loading complete. */
 
 
 // Throwing your own errors: You can create your own errors using the throw statement. This is useful for validating input or enforcing rules in your code.
@@ -65,6 +65,26 @@ registerStudent("Bola Okafor", 22); // Student registered: Bola Okafor, Age: 22
 registerStudent("", 22);            // Registration failed: Name cannot be empty!
 registerStudent("Kemi", 12);        // Registration failed: Age must be between 16 and 60.
 
+// when a function has a return inside try or catch, the finally block still runs first before the value is actually given back
+
+const checAge = age => {
+    try{
+        if(typeof age !== "number"){
+            throw new Error("Age must be a number")
+        }
+        if(age < 0){
+            throw new Error("Age cannot be negative")
+        }
+        return "Valid age"
+    }catch(err){
+        console.log(err.message)
+    }finally{
+        console.log("Age check completed")
+    }
+}
+checAge("Chigozie")
+checAge(-2)
+console.log(checAge(22))
 
 
 

@@ -108,3 +108,63 @@ const processNumbers = numbers =>{
     .map(number => number * 2)
 }
 console.log(processNumbers(numbers))
+
+const divideNumbers = (stNumber, ndNumber) => {
+    try{
+    if(ndNumber === 0){
+        throw new Error("Cannot divide by zero")
+    }
+    return stNumber / ndNumber
+}catch(error){
+    return "Failed: " + error.message
+}
+}
+console.log(divideNumbers(4, 2))
+console.log(divideNumbers(9, 0))
+console.log(divideNumbers(3, 9))
+
+
+const checAge = age => {
+    try{
+        if(typeof age !== "number"){
+            throw new Error("Age must be a number")
+        }
+        if(age < 0){
+            throw new Error("Age cannot be negative")
+        }
+        console.log("Valid age")
+    }catch(err){
+        console.log(err.message)
+    }finally{
+        console.log("Age check completed")
+    }
+}
+checAge("Chigozie")
+checAge(-2)
+checAge(22)
+
+let user = {
+    name: "Asake",
+    age: 28,
+    email: "asake@email.com"
+}
+const getUserProperty = property => {
+    try{
+        if(user[property] === "undefined"){
+            throw new Error("Property not found")
+    }
+    return user[property]
+}catch(err){
+    return err.message
+}
+}
+console.log(getUserProperty("email"))
+console.log(getUserProperty("height"))
+
+
+function printWord() { 
+    console.log("Backend"); 
+} 
+for (let i = 1; i <= 4; i++) { 
+    printWord(); 
+}

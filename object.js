@@ -1,9 +1,10 @@
 /** Object is a collection of related data
  *  It is wrapped in curly braces and has key-value pairs
+ *  A property in an object is the combination of the key and value, (name: "Christopher") below is a property of the object
  *  The key is the name of the property and the value is the data associated with that property
  *  The key and value are separated by a colon(:)
- * you can access the value of a property using dot notation or bracket notation
- * you can also add new properties to an object using dot notation or bracket notation */
+ *  you can access the value of a property using dot notation or bracket notation
+ *  you can also add new properties to an object using dot notation or bracket notation */
 
 let student = {name: "Christopher", age: 22, score: 76}
 student.name = "Tuff"

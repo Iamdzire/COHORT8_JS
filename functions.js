@@ -27,6 +27,7 @@ function welcome(name){
 welcome("Esther")
 
 /** "return" keyword is used to send the result of a function
+ * A function without return keyword will return "undefined" when that function is put in a variable and printed out
  *  Any code after the "return" keyword would be ignored
  *  After using "return" in your function code, always use console.log when calling your function */
 
