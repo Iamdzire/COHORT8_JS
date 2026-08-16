@@ -1,6 +1,6 @@
 // Node is a runtime environment for javascript that allows you to run javascript codes.
 
-// console.log helps run code 
+// console.log helps display something in terminal/print 
 
 console.log("HELLO WORLD!!");
 

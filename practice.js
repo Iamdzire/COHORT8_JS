@@ -168,3 +168,36 @@ function printWord() {
 for (let i = 1; i <= 4; i++) { 
     printWord(); 
 }
+
+const myName = "Uchendu Chigozie Emmanuel"
+let myAge = 22
+let city = "Lagos"
+let isStudent = true
+
+console.log(myName)
+console.log(myAge)
+console.log(city)
+console.log(isStudent)
+
+
+const myCities = ["Lagos", "Ogun", "Ondo", "Benin", "Delta"]
+const updatedCities = myCities.map(city =>{
+    if(city === "Lagos"){
+        return "I LOVE LAGOS"
+    }
+    return city
+})
+console.log(updatedCities)
+
+
+ const calculateBMI = (kg, m) => {
+    let result = kg / (m * m)
+    if(result < 18.5){
+        return "Underweight"
+    }else if(result >= 18.5 && result <= 24.9){
+        return "Normal"
+    }else{
+        return "Overweight"
+    }
+ }
+ console.log(calculateBMI(50, 1.8))

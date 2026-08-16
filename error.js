@@ -1,8 +1,9 @@
 // syntaxError: You made a typo or forgot to add something like a closing bracket.
 
-// referenceError: You are trying to use a variable that has not been declared or is out of scope.
+// referenceError: means JavaScript cannot find the variable you are looking for
 
-// typeError: You are trying to use a method or property on a data type that does not support it. For example, trying to use the .push() method on a string will give you a typeError because strings do not have the .push() method.
+// typeError: means the variable exists, but you are trying to use it in an impossible way
+
 
 // TRY and CATCH: try-catch lets your program handle errors gracefully. Instead of crashing, JavaScript runs your "backup plan" inside the catch block.
 
