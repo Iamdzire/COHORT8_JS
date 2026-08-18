@@ -75,3 +75,22 @@ console.log(reverseName.split("").reverse().join(""))
 
  const wordCheck = word => word === word.split("").reverse().join("") ? "It is a Palindrome word" : "It is not a Palindrome word"
  console.log(wordCheck("Chigozie"))
+
+
+ /** padStart AND padEnd
+  *  Add characters to the start or end of a string until it reaches a certain length. 
+  *  Takes in 2 parameters. first is the length of characters you want the string to be, second is the character you want to increase it by */
+
+ let id = "42"
+ console.log(id.padStart(4, "0"))
+ console.log(id.padEnd(3, "7"))
+// Masking a card number
+const cardNumber = "1234"
+console.log(cardNumber.padStart(16, "*"))
+
+
+/** .repeat
+ *  Creates a new string by repeating the original string a given number of times */
+
+let repeatString = "OAU POST UTME PAST QUESTIONS "
+console.log(repeatString.repeat(5))
