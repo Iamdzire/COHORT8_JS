@@ -35,6 +35,23 @@ if(studentScore >= 90){
     console.log("F")
 }
 
+
+/** switch: When you are checking one variable against many possible values,
+switch is cleaner and easier to read than a long chain of else if statements
+*   case: Each possible value of the variable you are checking.
+*   break: Stops JavaScript from falling into the next case. Always include this!
+*   default: Runs when no case matches (like else in an if statement). */
+
+let day = "Saturday"
+switch(day){
+    case "Monday": console.log("New week, fresh start!"); break;
+    case "Friday": console.log("Almost the weekend!"); break;
+    case "Saturday": 
+    case "Sunday": console.log("It is the weekend! Rest up."); break;
+    default: console.log("Midweek grind!")
+}
+
+
 /** Loops: Run the same code multiple times (for, while, for...of).
  * 
  * for loop: Used when you know the amount of time you want the code to run for. This is the syntax
