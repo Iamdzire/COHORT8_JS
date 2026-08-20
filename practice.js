@@ -201,3 +201,64 @@ console.log(updatedCities)
     }
  }
  console.log(calculateBMI(50, 1.8))
+
+
+ const getDayName = (day) => {
+    switch(day){
+        case 1: return "Monday"
+        case 2: return "Tuesday"
+        case 3: return "Wednesday"
+        case 4: return "Thursday"
+        case 5: return "Friday"
+        case 6: return "Saturday"
+        case 7: return "Sauday"
+        default: return "Invalid day"
+    }
+ }
+ console.log(getDayName(1))
+
+ const getFruitColour = (fruitName) => {
+    switch(fruitName){
+        case "apple": 
+        case "cherry": return "red"
+        case "banana": 
+        case "mango": return "yellow"
+        case "orange": return "orange"
+        default: return "Unknown fruit"
+    }
+ }
+ console.log(getFruitColour("apple"))
+
+ const getGrade = (score) => {
+    switch(true){
+        case(score >= 90): return "A"
+        case(score >= 80): return "B"
+        case(score >= 70): return "C"
+        case(score >= 60): return "D"
+        default: return "F"
+    }
+ }
+console.log(getGrade(65))
+
+const calculate = (num1, num2, operator) => {
+    switch(operator){
+        case "+": return num1 + num2
+        case "-": return num1 - num2
+        case "*": return num1 * num2
+        case "/": return num1 / num2
+        default: return "Invalid operator"
+    }
+}
+console.log(calculate(4, 2, "%"))
+
+
+const getAccessMessage = (userRole) => {
+    switch(userRole){
+        case "admin": return "Full access granted"
+        case "editor": return "Can edit content"
+        case "viewer": return "Can only view content"
+        case "guest": return "Limited access"
+        default: return "Role not recognized"
+    }
+}
+console.log(getAccessMessage("guest"))

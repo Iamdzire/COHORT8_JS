@@ -42,7 +42,7 @@ switch is cleaner and easier to read than a long chain of else if statements
 *   break: Stops JavaScript from falling into the next case. Always include this!
 *   default: Runs when no case matches (like else in an if statement). */
 
-let day = "Saturday"
+let day = "Monday"
 switch(day){
     case "Monday": console.log("New week, fresh start!"); break;
     case "Friday": console.log("Almost the weekend!"); break;
@@ -50,6 +50,22 @@ switch(day){
     case "Sunday": console.log("It is the weekend! Rest up."); break;
     default: console.log("Midweek grind!")
 }
+
+// If you are using switch in a function, and you use returu on your case, you dont need to put break because return automatically stops the function and exits
+
+const getDayName = (day) => {
+    switch(day){
+        case 1: return "Monday"
+        case 2: return "Tuesday"
+        case 3: return "Wednesday"
+        case 4: return "Thursday"
+        case 5: return "Friday"
+        case 6: return "Saturday"
+        case 7: return "Sauday"
+        default: return "Invalid day"
+    }
+ }
+ console.log(getDayName(1))
 
 
 /** Loops: Run the same code multiple times (for, while, for...of).
