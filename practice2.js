@@ -84,3 +84,56 @@ const promise3 = new Promise((resolve) => {
 
 Promise.all([promise1, promise2, promise3])
                                             .then(data => console.log(data))
+
+
+const a = 15
+const b = 4
+console.log(a + b)
+console.log(a - b)
+console.log(a * b)
+console.log(a / b)
+console.log(a % b)
+
+
+let value = "25.75"
+console.log(value)
+let numValue = parseFloat(value)
+console.log(numValue)
+let newValue = numValue * 2
+console.log(newValue)
+let netValue = newValue.toFixed(1)
+console.log(netValue)
+
+
+const checkNumber = num => {
+    if(num % 2 !== 0){
+        return "Odd"
+    }else{
+        return "Even"
+    }
+}
+console.log(checkNumber(7))
+console.log(checkNumber(10))
+
+
+const random = Math.random()
+console.log(random)
+const sigRandom = random * 10
+console.log(sigRandom)
+
+console.log(Math.floor(9.7))
+console.log(Math.ceil(9.3))
+
+console.log(Math.max(12, 45, 8, 32))
+
+
+const isValidNumber = value => {
+   return isFinite(value) ? "true" : "false"
+}
+console.log(isValidNumber(42))
+console.log(isValidNumber("hello"))
+console.log(isValidNumber(NaN))
+
+
+
+

@@ -11,12 +11,17 @@ console.log(x % y)
 //comparison operator
 let a = 10;
 let b = 20;
-console.log(a === b);
-console.log(a !== b);
-console.log(a < b);
-console.log(a > b);
-console.log(a <= b);
-console.log(a >= b)
+let c = true;
+let d = 1;
+
+// true in the number form is 1 and false is 0 so when you compare c and d it will return true
+console.log(a === b); // Strictly equals: compares datatypes and values
+console.log(c == d); // loosely equals: converts datatype and compares values
+console.log(a !== b); // Strictly not equals: compares datatypes and values
+console.log(a < b); // Less than: compares values
+console.log(a > b); // Greater than: compares values
+console.log(a <= b); // Less than or equals: compares values
+console.log(a >= b); // Greater than or equals: compares values
 
 //logical operators
 let hasBread = true;

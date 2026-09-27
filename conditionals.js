@@ -144,6 +144,13 @@ while(artistName<artists.length){
     artistName++
 }
 
+// for...of loop: This is the easiest way to loop through every item in an array
+
+let students = ["Chigozie", "Chiemerie", "Ekene", "Chichi", "Ebube"]
+for(let student of students){
+    console.log(`Welcome ${student}!`)
+}
+
 
 
 

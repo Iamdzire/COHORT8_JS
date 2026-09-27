@@ -1,6 +1,6 @@
 // syntaxError: You made a typo or forgot to add something like a closing bracket.
 
-// referenceError: means JavaScript cannot find the variable you are looking for
+// referenceError: means JavaScript cannot find the variable you are looking for. You are trying to get a variable that you havn't defined
 
 // typeError: means the variable exists, but you are trying to use it in an impossible way
 

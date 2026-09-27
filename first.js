@@ -62,6 +62,7 @@ console.log(result)
 let gender = null;
 console.log(gender)
 
-//arrays
+//arrays: JavaScript sees arrays as object
 let fruits = ["apple", "banana", "cherry", 1, 2, true];
 console.log(fruits)
+console.log(typeof(fruits))
