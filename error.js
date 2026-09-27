@@ -1,8 +1,9 @@
 // syntaxError: You made a typo or forgot to add something like a closing bracket.
 
-// referenceError: You are trying to use a variable that has not been declared or is out of scope.
+// referenceError: means JavaScript cannot find the variable you are looking for. You are trying to get a variable that you havn't defined
 
-// typeError: You are trying to use a method or property on a data type that does not support it. For example, trying to use the .push() method on a string will give you a typeError because strings do not have the .push() method.
+// typeError: means the variable exists, but you are trying to use it in an impossible way
+
 
 // TRY and CATCH: try-catch lets your program handle errors gracefully. Instead of crashing, JavaScript runs your "backup plan" inside the catch block.
 
@@ -41,8 +42,8 @@ function loadUserData(userId) {
     }
 }
 
-console.log(loadUserData(5));   // Data loaded for user: 5  -->  Loading complete.
-console.log(loadUserData(-1));  // Failed: User ID must be greater than 0  -->  Loading complete. */
+loadUserData(5);   // Data loaded for user: 5  -->  Loading complete.
+loadUserData(-1);  // Failed: User ID must be greater than 0  -->  Loading complete. */
 
 
 // Throwing your own errors: You can create your own errors using the throw statement. This is useful for validating input or enforcing rules in your code.
@@ -65,6 +66,26 @@ registerStudent("Bola Okafor", 22); // Student registered: Bola Okafor, Age: 22
 registerStudent("", 22);            // Registration failed: Name cannot be empty!
 registerStudent("Kemi", 12);        // Registration failed: Age must be between 16 and 60.
 
+// when a function has a return inside try or catch, the finally block still runs first before the value is actually given back
+
+const checAge = age => {
+    try{
+        if(typeof age !== "number"){
+            throw new Error("Age must be a number")
+        }
+        if(age < 0){
+            throw new Error("Age cannot be negative")
+        }
+        return "Valid age"
+    }catch(err){
+        console.log(err.message)
+    }finally{
+        console.log("Age check completed")
+    }
+}
+checAge("Chigozie")
+checAge(-2)
+console.log(checAge(22))
 
 
 

@@ -1,4 +1,6 @@
-// console.log helps run code 
+// Node is a runtime environment for javascript that allows you to run javascript codes.
+
+// console.log helps display something in terminal/print 
 
 console.log("HELLO WORLD!!");
 
@@ -60,6 +62,7 @@ console.log(result)
 let gender = null;
 console.log(gender)
 
-//arrays
+//arrays: JavaScript sees arrays as object
 let fruits = ["apple", "banana", "cherry", 1, 2, true];
 console.log(fruits)
+console.log(typeof(fruits))

@@ -108,3 +108,162 @@ const processNumbers = numbers =>{
     .map(number => number * 2)
 }
 console.log(processNumbers(numbers))
+
+const divideNumbers = (stNumber, ndNumber) => {
+    try{
+    if(ndNumber === 0){
+        throw new Error("Cannot divide by zero")
+    }
+    return stNumber / ndNumber
+}catch(error){
+    return "Failed: " + error.message
+}
+}
+console.log(divideNumbers(4, 2))
+console.log(divideNumbers(9, 0))
+console.log(divideNumbers(3, 9))
+
+
+const checAge = age => {
+    try{
+        if(typeof age !== "number"){
+            throw new Error("Age must be a number")
+        }
+        if(age < 0){
+            throw new Error("Age cannot be negative")
+        }
+        console.log("Valid age")
+    }catch(err){
+        console.log(err.message)
+    }finally{
+        console.log("Age check completed")
+    }
+}
+checAge("Chigozie")
+checAge(-2)
+checAge(22)
+
+let user = {
+    name: "Asake",
+    age: 28,
+    email: "asake@email.com"
+}
+const getUserProperty = property => {
+    try{
+        if(user[property] === "undefined"){
+            throw new Error("Property not found")
+    }
+    return user[property]
+}catch(err){
+    return err.message
+}
+}
+console.log(getUserProperty("email"))
+console.log(getUserProperty("height"))
+
+
+function printWord() { 
+    console.log("Backend"); 
+} 
+for (let i = 1; i <= 4; i++) { 
+    printWord(); 
+}
+
+const myName = "Uchendu Chigozie Emmanuel"
+let myAge = 22
+let city = "Lagos"
+let isStudent = true
+
+console.log(myName)
+console.log(myAge)
+console.log(city)
+console.log(isStudent)
+
+
+const myCities = ["Lagos", "Ogun", "Ondo", "Benin", "Delta"]
+const updatedCities = myCities.map(city =>{
+    if(city === "Lagos"){
+        return "I LOVE LAGOS"
+    }
+    return city
+})
+console.log(updatedCities)
+
+
+ const calculateBMI = (kg, m) => {
+    let result = kg / (m * m)
+    if(result < 18.5){
+        return "Underweight"
+    }else if(result >= 18.5 && result <= 24.9){
+        return "Normal"
+    }else{
+        return "Overweight"
+    }
+ }
+ console.log(calculateBMI(50, 1.8))
+
+
+ const getDayName = (day) => {
+    switch(day){
+        case 1: return "Monday"
+        case 2: return "Tuesday"
+        case 3: return "Wednesday"
+        case 4: return "Thursday"
+        case 5: return "Friday"
+        case 6: return "Saturday"
+        case 7: return "Sauday"
+        default: return "Invalid day"
+    }
+ }
+ console.log(getDayName(1))
+
+ const getFruitColour = (fruitName) => {
+    switch(fruitName){
+        case "apple": 
+        case "cherry": return "red"
+        case "banana": 
+        case "mango": return "yellow"
+        case "orange": return "orange"
+        default: return "Unknown fruit"
+    }
+ }
+ console.log(getFruitColour("apple"))
+
+ const getGrade = (score) => {
+    switch(true){
+        case(score >= 90): return "A"
+        case(score >= 80): return "B"
+        case(score >= 70): return "C"
+        case(score >= 60): return "D"
+        default: return "F"
+    }
+ }
+console.log(getGrade(65))
+
+const calculate = (num1, num2, operator) => {
+    switch(operator){
+        case "+": return num1 + num2
+        case "-": return num1 - num2
+        case "*": return num1 * num2
+        case "/": return num1 / num2
+        default: return "Invalid operator"
+    }
+}
+console.log(calculate(4, 2, "%"))
+
+
+const getAccessMessage = (userRole) => {
+    switch(userRole){
+        case "admin": return "Full access granted"
+        case "editor": return "Can edit content"
+        case "viewer": return "Can only view content"
+        case "guest": return "Limited access"
+        default: return "Role not recognized"
+    }
+}
+console.log(getAccessMessage("guest"))
+
+
+
+
+

@@ -27,6 +27,7 @@ function welcome(name){
 welcome("Esther")
 
 /** "return" keyword is used to send the result of a function
+ * A function without return keyword will return "undefined" when that function is put in a variable and printed out
  *  Any code after the "return" keyword would be ignored
  *  After using "return" in your function code, always use console.log when calling your function */
 
@@ -105,7 +106,7 @@ sayHi()
 const showArtist = name => `I love listening to ${name}`
 console.log(showArtist("burnaBoy"))
 
-// Callback function: they are functions that are passed as arguments to other functions. They give the action to do when the function is called. They are used to make our code more dynamic and reusable.
+// Callback function: They are functions you pass into another function.
 
 const sayName = name => `My name is ${name}`
 const useCallBack = myNameIs => myNameIs("Asake")
@@ -118,3 +119,44 @@ console.log(run(double))
 const showMessage = message => message
 const execute = callBack => callBack(`I am learning callbacks`)
 console.log(execute(showMessage))
+
+/** In the above examples, we can say that sayName, double and showMessage are the callback functions passed into another function.
+
+Understanding: using the first example; All we need to understand is that when we called the function "useCallback(sayName)" using console.log,
+sayName (function) equals the parameter myNameIs, automatically making myNameIs a function.
+Which means myNameIs(same with double) can be called with an argument("Asake").
+Then when sayName is called as the callback function using console.log, it prints "My name is Asake"
+This applies to the remaining two and other callback functions
+ */
+
+
+// Async js
+
+const orderPizza = callback => {
+    setTimeout(() => { 
+        const food = "pizza"
+        const fruit = "Banana"
+        callback(food)
+        callback(fruit)
+    }, 5000)
+}
+const pizzaReady = food => console.log(`Eat the ${food}`)
+
+orderPizza(pizzaReady)
+console.log("Fetching the remote")
+
+/** Quick explanation to the code above: This simply shows how callback functions can be used to control asynchronisation.
+orderPizza function first runs even though it would take 5 seconds to run, then pizzaReady would run next.
+Thats why the terminal would print "Eat the pizza" after 5 seconds.
+ */
+
+const testing =test => {
+    const fruit = "apple"
+    test()
+}
+const getFruit = fruit => console.log(`I love ${fruit}`)
+testing(getFruit)
+
+/** Here we can see that the testing function runs first because the terminal printed "I love undefined",
+because the callback does not have an argument
+ */
