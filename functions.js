@@ -160,3 +160,5 @@ testing(getFruit)
 /** Here we can see that the testing function runs first because the terminal printed "I love undefined",
 because the callback does not have an argument
  */
+
+// Nothing here
